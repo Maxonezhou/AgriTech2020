@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
+import image from './home.svg';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +29,31 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <div className = "Home-wrap">
+          <div className = "Image-wrap">
+            <img className = "Home-image" src = {image} />
+          </div>
+          <div className = "Home">
+            <div className = "Text">
+              <h1 className = "Title1">
+                <span className = "Welcome">Welcome</span> to Placeholder styll, ok this man's a bean
+              </h1>
+              <h2 className = "Title2">
+                Helping modernize the agriculture industry one farm at a time.
+              </h2>
+              <div className = "Btn-wrap">
+                <button className = "Title-Btn">
+                  Let's get started!
+                  <i className="fa fa-arrow-right hvr-forward btn-arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+    /*return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -48,7 +73,7 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
+    );*/
   }
 }
 

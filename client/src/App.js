@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { apiResponse: "" };
+    this.myFunction = this.myFunction.bind(this);
+    this.callAPI = this.callAPI.bind(this);
   }
 
   callAPI() {
@@ -18,6 +22,11 @@ class App extends Component {
     this.callAPI();
   }
 
+  myFunction() {
+    this.callAPI();
+    alert(this.state.apiResponse);
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,6 +35,9 @@ class App extends Component {
           <p className="App-intro">
             Hello {this.state.apiResponse}
           </p>
+          <button className="btn" id="btn" onClick={this.myFunction}>
+            Button
+          </button>
           <a
             className="App-link"
             href="https://reactjs.org"
